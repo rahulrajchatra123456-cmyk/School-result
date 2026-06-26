@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Result</title>
+</head>
+<body>
+
+<h2>Result Check</h2>
+
+<input type="text" id="roll" placeholder="Enter Roll Number">
+<button onclick="getResult()">Search</button>
+
+<p id="output"></p>
+
+<script>
+const API_URL = "https://script.google.com/macros/s/AKfycbzZ7xLAUhmzkdYarN1VtyVISjV5torrwnSl6h9Z2_ianuQtCLaa5i3X0B53IQpU5gi3-Q/exec";
+
+function getResult() {
+  let roll = document.getElementById("roll").value;
+
+  fetch(API_URL + "?roll=" + roll)
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("output").innerHTML = data;
+    });
+}
+</script>
+
+</body>
+</html>
