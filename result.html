@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Result</title>
+</head>
+<body>
+
+<h2>Result Check</h2>
+
+<input type="text" id="roll" placeholder="Enter Roll Number">
+<button onclick="show()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function show() {
+  let roll = document.getElementById("roll").value;
+  document.getElementById("result").innerText = "Your Roll Number is: " + roll;
+}
+</script>
+
+</body>
+</html>
